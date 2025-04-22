@@ -1,26 +1,18 @@
-import { Link } from 'react-router-dom';
-import './Item.css';
-
-
-const Item = ({ id, title, price, pictureUrl, description, stock }) => {
-  const shortDescription = description ? description.substring(0, 60) + '...' : '';
-
+import React from 'react'
+import {Link} from 'react-router-dom'
+const Item = ({producto}) => {
+    // const {img, name, price}= producto
   return (
-    <article className="item-card">
-      <img src={pictureUrl} alt={title} className="item-image" loading="lazy" />
-      <div className="item-content">
-        <h3 className="item-title">{title}</h3>
-        {shortDescription && <p className="item-description">{shortDescription}</p>}
-        <div className="item-footer">
-          <span className="item-price">${price.toLocaleString()}</span>
-          <span className={`item-stock ${stock === 0 ? 'out-of-stock' : ''}`}>
-            {stock > 0 ? `${stock} disponibles` : 'Sin stock'}
-          </span>
+    <div className='card' style={{width:'18rem', marginTop:15}}>
+        <img className='card-img-top' src={producto.img} alt={producto.name}/>
+        <div className='card-body'>
+            <h5 className='card-title'>{producto.name}</h5>
+            <p className='card-text'>${producto.price},00</p>
+            <Link className='btn btn-dark' to={`/item/${producto.id}`}>Ver más</Link>
+            {/* <Link className='btn btn-dark' to={'/item/'+producto.id}>Ver más</Link> */}
         </div>
-        <Link to={`/item/${id}`} className="item-button">Ver detalle</Link>
-      </div>
-    </article>
-  );
-};
+    </div>
+  )
+}
 
-export default Item;
+export default Item

@@ -1,48 +1,23 @@
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #333;
-    color: white;
-  }
-  
-  .navbar-brand a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .navbar-categories {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
-  }
-  
-  .navbar-categories a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .cart-widget {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .cart-icon {
-    font-size: 1.5rem;
-  }
-  
-  /* .cart-count {
-    background-color: rgba(101, 20, 231, 0.329);
-    border-radius: 50%;
-    padding: 0.2rem 0.5rem;
-    font-size: 0.8rem;
-  } */
-  
-  .item-list-container {
-    padding: 2rem;
-    text-align: center;
-  }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Navbar */
+
+.navContainer {
+  background-color: gray;
+  padding: 2rem;;
+}
+
+.button-purple {
+  padding:1rem;
+  background-color: blueviolet;
+}
+
+.button-gray {
+  padding:1rem;
+  background-color: rgba(190, 161, 218, 0.322);
+}

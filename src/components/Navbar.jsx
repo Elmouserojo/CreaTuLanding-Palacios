@@ -1,37 +1,22 @@
-import { Link } from 'react-router-dom';
-import Carrito from './carrito.jsx';
-import './Navbar.css'; 
-
-
+// import Button from '../examples/Button'
+import '../styles/Navbar.css'
+import CartWidget from './CartWidget'
+import { NavLink } from 'react-router-dom'
 const Navbar = () => {
-  return (
-    <header className="navbar">
-      <div className="navbar-container">
-        {/* Logo */}
-        <Link to="/" className="navbar-logo">Mi Tienda</Link>
-        
-        {/* Navegación principal */}
-        <nav className="navbar-links">
-          <Link to="/" className="navbar-link">Inicio</Link>
-
-          <div className="navbar-dropdown">
-            <span className="navbar-link" role="button" tabIndex={0}>Categorías</span>
-            <div className="dropdown-content">
-              <Link to="/category/electronics">Electrónica</Link>
-              <Link to="/category/jewelery">Joyas</Link>
-              <Link to="/category/men's clothing">Ropa Hombre</Link>
-              <Link to="/category/women's clothing">Ropa Mujer</Link>
+  
+    return(
+        <nav className='nav-container'>
+           <NavLink to='/'>
+           <img src='../logo-shop.png' ale='logo' className='logo'/>
+            </NavLink> 
+            <div className='a-container'>
+                <NavLink to='/category/nuevos'>Nuevos</NavLink>
+                <NavLink to='/category/ofertas'>Ofertas</NavLink>
+                <NavLink to='/category/mas vendidos'>Más vendidos</NavLink>
             </div>
-          </div>
+           <CartWidget/>
         </nav>
+    )
+}
 
-        {/* Icono de carrito */}
-        <Link to="/cart" className="navbar-cart" aria-label="Ver carrito">
-          <Carrito />
-        </Link>
-      </div>
-    </header>
-  );
-};
-
-export default Navbar;
+export default Navbar
