@@ -1,5 +1,5 @@
 import React from 'react';
-import './Carrito.css'; 
+// import './Carrito.css'; 
 const Carrito = () => {
   // Valor hardcodeado como se solicita para esta entrega
   const cartItems = 5;

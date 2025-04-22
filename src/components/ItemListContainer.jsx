@@ -13,27 +13,43 @@ const ItemListContainer = ({ greeting }) => {
           resolve([
             {
               id: 1,
-              title: 'Producto 1',
+              title: 'SSD 1TB',
               price: 1000,
-              pictureUrl: 'https://via.placeholder.com/300',
+              pictureUrl: '/ssd.jpg',
               description: 'Descripción del producto 1',
               stock: 5
             },
             {
               id: 2,
-              title: 'Producto 2',
+              title: 'Cadena de Oro',
               price: 1500,
-              pictureUrl: 'https://via.placeholder.com/300',
+              pictureUrl: '/cadenaDeOro.jpg',
               description: 'Descripción del producto 2',
               stock: 3
             },
             {
               id: 3,
-              title: 'Producto 3',
+              title: 'Pantalón de algodón',
               price: 2000,
-              pictureUrl: 'https://via.placeholder.com/300',
+              pictureUrl: '/pantalon.jpg',
               description: 'Descripción del producto 3',
               stock: 0
+            },
+            {
+              id: 4,
+              title: 'Remera de algodón (Mujer)',
+              price: 2000,
+              pictureUrl: '/remera.jpg',
+              description: 'Descripción del producto 4',
+              stock: 4
+            },
+            {
+              id: 5,
+              title: 'Pantalla LED 24"',
+              price: 2000,
+              pictureUrl: '/pantalla.jpg',
+              description: 'Descripción del producto 5',
+              stock: 1
             }
           ]);
         }, 1000);
