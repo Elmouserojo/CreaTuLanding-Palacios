@@ -7,8 +7,8 @@ const Navbar = () => {
     return(
         <nav className='nav-container'>
            <NavLink to='/'>
-           <img src='../logo-shop.png' ale='logo' className='logo'/>
-            </NavLink> 
+           <img src='/logoShop.png' ale='porque no aparece?' className='logo'/> //No aparece el logo porque no se cambia desde acá
+            </NavLink>                                                          //sino desde NavbarBootstrap
             <div className='a-container'>
                 <NavLink to='/category/nuevos'>Nuevos</NavLink>
                 <NavLink to='/category/ofertas'>Ofertas</NavLink>

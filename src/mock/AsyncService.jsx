@@ -1,39 +1,48 @@
 const products = [
   {
       id:'01',
-      name:'Random 01',
-      price:1000,
+      name:'Cadena de Oro',
+      price:10000,
       description:'lorem lorem lorem',
       stock:15,
       category:'nuevos',
-      img:'../logo-shop.png'
+      img:'/cadenaDeOro.png'
   },
   {
       id:'02',
-      name:'Random 02',
-      price:3000,
+      name:'Pantalla LCD',
+      price:9000,
       description:'lorem lorem lorem',
       stock:5,
       category:'ofertas',
-      img:'https://picsum.photos/200'
+      img:'../pantalla.png'
   },
   {
       id:'03',
-      name:'Random 03',
+      name:'Pantalón de Algodón',
       price:3800,
       description:'lorem lorem lorem',
       stock:25,
       category:'mas vendidos',
-      img:'https://picsum.photos/204'
+      img:'../pantalon.png'
   },
   {
       id:'04',
-      name:'Random 04',
+      name:'Disco SSD',
       price:8000,
       description:'lorem lorem lorem',
       stock:5,
       category:'nuevos',
-      img:'https://picsum.photos/206'
+      img:'../ssd.png'
+  },
+  {
+      id:'05',
+      name:'Remera de Algodón',
+      price:2000,
+      description:'lorem lorem lorem',
+      stock:5,
+      category:'nuevos',
+      img:'../remera.png'
   }
 
 ]
