@@ -1,40 +1,53 @@
-import {getProducts} from '../mock/asyncService'
+import {getProducts, products} from '../mock/AsyncService'
 import { useEffect, useState } from "react"
 import ItemList from "./ItemList"
 import { useParams } from 'react-router-dom'
-const ItemListContainer = ({greeting}) => {
-  const [data, setData]= useState([])
-  const [loader, setLoader] =  useState(false)
-  const {categoryId}= useParams()
+import LoaderComponent from './LoaderComponents'
+import { addDoc, collection, getDocs, query, where } from 'firebase/firestore'
+import { db } from '../service/firebase'
+
+const ItemListContainer = ({ greeting }) => {
+  const [data, setData] = useState([])
+  const [loader, setLoader] = useState(false)
+  const { categoryId } = useParams()
   console.log(categoryId)
 
+  // Conexión a Firebase
+  useEffect(() => {
+    setLoader(true)
+    // Conectamos con nuestra colección
+    const productsCollection = categoryId ? 
+      query(collection(db, "productos"), where("category", "==", categoryId)) 
+      : collection(db, "productos")
 
-    useEffect(()=>{
-      setLoader(true)
-      getProducts()
-      .then((res)=>{
-        if(categoryId){
-          //filtro
-          setData(res.filter((prod)=> prod.category === categoryId ))
-        }else{
-          setData(res)
-        }
-      })
-      .catch((error)=> console.log(error))
-      .finally(()=> setLoader(false))
-    },[categoryId])
-   
-    return(
-        <div>
-          {
-            loader ? <h1>Cargando..</h1>
-            :<div>
-            <h1>{greeting} {categoryId && <span style={{textTransform:'capitalize'}}>{categoryId}</span>}</h1>
-           <ItemList data={data}/>
-          </div>
+    // Pedir los documentos
+    getDocs(productsCollection)
+      .then((res) => {
+        // Limpiamos los datos para poder utilizarlos
+        const list = res.docs.map((doc) => {
+          return {
+            id: doc.id,
+            ...doc.data()
           }
-        </div>
-    )
+        })
+        setData(list)
+      })
+      .catch((error) => console.log(error))
+      .finally(() => setLoader(false))
+  }, [categoryId])
+
+
+  return (
+    <div>
+      {
+        loader ? <LoaderComponent />
+          : <div>
+              <h1>{greeting} {categoryId && <span style={{ textTransform: 'capitalize' }}>{categoryId}</span>}</h1>
+              <ItemList data={data} />
+            </div>
+      }
+    </div>
+  )
 }
 
 export default ItemListContainer

@@ -17,6 +17,7 @@ function App() {
   <Route path='/' element={<ItemListContainer greeting='Bienvenidos a TechZone '/>}/>
   <Route path='/category/:categoryId' element={<ItemListContainer greeting='Estas en la categoria:'/>}/>
   <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
+  <Route path='/cart' element={<div>Cart Page</div>}/>
 </Routes>
 </CartProvider>
 

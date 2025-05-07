@@ -1,12 +1,30 @@
-# React + Vite
+# Coder Felx App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto fue realizado para aprender las bases de React con javascript en Coderhouse.
 
-Currently, two official plugins are available:
+![image](/public/shop.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instalación
 
-## Expanding the ESLint configuration
+1. Clonar el repositorio
+2. Use el comando `cd mi-app-reac` para moverse a la carpeta del proyecto.
+3. Use el comando `npm install` para instalar las dependencias.
+4. Use el comando `npm run dev` para iniciar el proyecto.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Versión Host
+
+Si desea ver el proyecto online, puede ingresar al siguiente link [GitHub](https://github.com/Elmouserojo/CreaTuLanding-Palacios)
+
+### Librerias utilizadas
+
+- [React] (https://es.react.dev/)
+- [Bootstrap] (https://react-bootstrap.netlify.app/)
+- [React-Icons] (https://react-icons.github.io/react-icons/)
+- [React-Router-Dom] (https://reactrouter.com/en/main)
+- [React-Spinners] (https://www.npmjs.com/package/react-spinners)
+- [Firebase] (https://firebase.google.com/)
+- [React-Hook-Form] (https://react-hook-form.com/)
+- [SweetAlert2] (https://sweetalert2.github.io/)
+
+
+#### Desarrollado por David Palacios
