@@ -12,12 +12,12 @@ const ItemDetail = ({ productDetail }) => {
     addToCart(productDetail, cantidad)
     setPurchase(true)
     Swal.fire({
-      position: 'top-end',
+      position: 'center',
       icon: 'success',
       title: `Agregaste ${productDetail.name} al carrito`,
       showCancelButton: false,
       showConfirmButton: false,
-      timer: 1000
+      timer: 1500
     })
   }
 

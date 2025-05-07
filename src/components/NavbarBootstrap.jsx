@@ -11,7 +11,7 @@ function NavbarBootstrap() {
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand as={NavLink} to='/'>
-            <img src='../logo-shop.png' alt='logo' className='logo'/>
+            <img src='../shopLogo.png' alt='logo' className='logo'/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
