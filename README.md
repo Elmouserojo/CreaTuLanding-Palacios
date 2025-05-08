@@ -13,7 +13,7 @@ Este proyecto fue realizado para aprender las bases de React con javascript en C
 
 ### Versión Host
 
-Si desea ver el proyecto online, puede ingresar al siguiente link [GitHub](https://github.com/Elmouserojo/CreaTuLanding-Palacios)
+Si desea ver el proyecto online, puede ingresar al siguiente link [GitHub](https://techzone-gamma.vercel.app/)
 
 ### Librerias utilizadas
 
