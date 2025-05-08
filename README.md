@@ -1,4 +1,4 @@
-# Coder Felx App
+# Coder Flex App
 
 Este proyecto fue realizado para aprender las bases de React con javascript en Coderhouse.
 
