@@ -6,6 +6,7 @@ import { addDoc, collection, doc, getDoc, serverTimestamp, updateDoc } from 'fir
 import { db } from '../service/firebase'
 import { Button } from 'react-bootstrap'
 
+
 const ReactHookForm = () => {
 const[orderId, setOrderId]= useState('')
 const [loading, setLoading]= useState(false)
@@ -31,7 +32,7 @@ const finalizarCompra = (dataDelForm) =>{
     addDoc(ventas, order)
     .then((res)=>{
 
-        //OPCIONAL
+        //actualizar stock en firebase
         cart.forEach((item)=>{
             const docRef = doc(db, "productos", item.id)
             getDoc(docRef)

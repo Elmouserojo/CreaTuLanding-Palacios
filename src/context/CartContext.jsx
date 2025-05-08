@@ -60,12 +60,12 @@ const cartTotal = () => {
     return cart.reduce((acc, prod)=> acc += prod.price * prod.quantity, 0)
 }
 
-//PLUS
-//DESCONTAR EL STOCK LOCAL
+
+//descontar el stock local
 const itemQuantity = (id) => {
     const itemInCart = cart.find((prod)=> prod.id === id)
     if(itemInCart){
-        //devuelva la cantidad de ese item en el carrito
+        //devuelve la cantidad de ese item en el carrito
         return itemInCart.quantity
     }else{
         //no existe en el carrito

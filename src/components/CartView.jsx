@@ -21,33 +21,29 @@ const CartView = () => {
 
     return (
         <div>
-            <h1>Tu Carrito</h1>
-            <div>
-                {cart.map((compra) => (
-                    <div
-                        key={compra.id}
-                        style={{
-                            display: 'flex',
-                            justifyContent: 'space-between',
-                            alignItems: 'center',
-                            width: '100%',
-                            padding: '2rem'
-                        }}
-                    >
-                        <img src={compra.img} alt={compra.name} style={{ width: '10rem' }} />
-                        <span>{compra.name}</span>
-                        <span>{compra.quantity}</span>
-                        <span>${compra.price},00</span>
-                        <span>Precio final: ${compra.quantity * compra.price},00</span>
-                        <button className='btn btn-danger' onClick={() => removeItem(compra.id)}>X</button>
-                    </div>
-                ))}
-            </div>
-            <span>Total a pagar: ${cartTotal()}</span>
-            <button className='btn btn-danger' onClick={preConfirmation}>Borrar todo el carrito</button>
-            <Link to='/checkout'>Terminar compra</Link>
+          <h1>Tu Carrito</h1>
+          <div>
+            {cart.map((compra) => (
+              <div className="compra-item" key={compra.id}>
+                <img src={compra.img} alt={compra.name} className="compra-img" />
+                <div className="compra-info">
+                  <h5 className="compra-nombre">{compra.name}</h5>
+                  <p>Cantidad: {compra.quantity}</p>
+                  <p>Precio unitario: ${compra.price},00</p>
+                  <p><strong>Total: ${compra.quantity * compra.price},00</strong></p>
+                </div>
+                <button className="btn btn-danger eliminar" onClick={() => removeItem(compra.id)}>X</button>
+              </div>
+            ))}
+          </div>
+          <span>Total a pagar: ${cartTotal()}</span>
+          <div style={{ marginTop: '1rem' }}>
+            <button className="btn btn-danger" onClick={preConfirmation}>Borrar todo el carrito</button>
+            <Link to='/checkout' className="btn btn-primary" style={{ marginLeft: '1rem' }}>Terminar compra</Link>
+          </div>
         </div>
-    )
+      );
+      
 }
 
 export default CartView

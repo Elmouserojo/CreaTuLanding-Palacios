@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-}
+  text-align: center;
+  }
 
 
 /* Navbar */
@@ -21,4 +22,49 @@
 .button-gray {
   padding:1rem;
   background-color: rgba(190, 161, 218, 0.322);
+}
+
+/*Formularios*/
+
+.form-control {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: sans-serif;
+}
+
+.form-control::placeholder {
+  color: #aaa !important;
+  opacity: 1 !important;
+}
+
+.compra-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.compra-img {
+  width: 10rem;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.compra-info {
+  flex: 1;
+}
+
+.compra-nombre {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.eliminar {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
 }

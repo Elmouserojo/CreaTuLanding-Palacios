@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react'
 import { CartContext } from '../context/CartContext'
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import { db } from '../service/firebase'
+import '..styles/App.css'
+
 
 const Checkout = () => {
     const [buyer, setBuyer] = useState({})
@@ -46,7 +48,7 @@ const Checkout = () => {
         <div>
             {orderId ? (
                 <div>
-                    <h2>Realizaste tu compra, el ID es: {orderId}</h2>
+                    <h2>Compra realizada. El ID es: {orderId}</h2>
                 </div>
             ) : (
                 <div>
@@ -55,13 +57,12 @@ const Checkout = () => {
                         <input type="text" name="name" placeholder="Nombre" onChange={buyerData} />
                         <input type="text" name="lastname" placeholder="Apellido" onChange={buyerData} />
                         <input type="email" name="email" placeholder="Correo electrónico" onChange={buyerData} />
-                        <input
-                            type="email"
+                        <input                             type="email"
                             name="second-email"
                             placeholder="Repetir correo electrónico"
                             onChange={(e) => setValidateEmail(e.target.value)}
                         />
-                        <button type="submit">Enviar</button>
+                        <button className='button' type="submit">Enviar</button>
                     </form>
                 </div>
             )}
